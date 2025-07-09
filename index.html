@@ -4,17 +4,150 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Landing Page</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #757575;
+      color: #333;
+    }
+ 
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+ 
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+ 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+ 
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+ 
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+ 
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+ 
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+ 
+    .hero {
+      padding: 80px 0;
+      background: #000000;
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+ 
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+ 
+    .hero button {
+      padding: 12px 24px;
+      background: white;
+      color: #3498db;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+ 
+    section {
+      padding: 60px 0;
+    }
+ 
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+ 
+    .grid-item {
+      flex: 1 1 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .contato {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+ 
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+ 
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: #2c3e50;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+      }
+ 
+      .menu.active {
+        display: flex;
+      }
+ 
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <div class="logo">MinhaMarca</div>
+        <div class="logo">Vinicius P.</div>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="menu" id="menu">
           <a href="#sobre">Sobre</a>
-          <a href="#recursos">Recursos</a>
+          <a href="#Habilidade">Habilidade</a>
           <a href="#contato">Contato</a>
         </div>
       </nav>
@@ -23,49 +156,44 @@
  
   <section class="hero">
     <div class="container">
-      <h1>Bem-vindo à nossa página</h1>
-      <p>Apresente aqui o seu produto, serviço ou ideia de forma clara e objetiva.</p>
-      <button>Saiba Mais</button>
+      <h1>Bem Vindo</h1>
+      <p>Vou falar sobre mim.😁👍</p>
     </div>
   </section>
  
   <section id="sobre">
     <div class="container">
-      <h2>Sobre Nós</h2>
-      <p>Um breve parágrafo sobre o que a empresa faz, sua missão, visão ou diferencial.</p>
+     <h2>Sobre Eu</h2>
+      <p>Sou o Vinicius, estudo na escola Heriberto Hülse , minha materia favorita é a hora da saida , sou organizado, responsavel, inteligente e outros (não parece mas sou).</p>
     </div>
   </section>
  
-  <section id="recursos">
+  <section id="Habilidade">
     <div class="container">
-      <h2>Recursos</h2>
+      <h2>Habilidade</h2>
       <div class="grid">
         <div class="grid-item">
-          <h3>Recurso 1</h3>
-          <p>Descrição breve do recurso.</p>
+          <h3>Habilidade 1</h3>
+          <p>Jogador de Basquete(não parece mas sou).</p>
         </div>
         <div class="grid-item">
-          <h3>Recurso 2</h3>
-          <p>Descrição breve do recurso.</p>
-        </div>
-        <div class="grid-item">
-          <h3>Recurso 3</h3>
-          <p>Descrição breve do recurso.</p>
+          <h3>Habilidade 2</h3>
+          <p>Pogramador (que sabe só o basico do basico).</p>
         </div>
       </div>
     </div>
   </section>
  
   <section id="contato">
-    <div class="container">
+    <div class="container contato">
       <h2>Contato</h2>
-      <p>Email: contato@exemplo.com</p>
-      <p>Telefone: (00) 00000-0000</p>
+      <p>Email: 4553779780@estudante.sed.sc.gov.br</p>
+      <p>Telefone: (48) 99208-0440</p>
     </div>
   </section>
  
   <footer>
-    <p>&copy; 2025 MinhaMarca. Todos os direitos reservados.</p>
+    <p>&copy; 2025 MinhaMarca.</p>
   </footer>
  
   <script>
